@@ -1,17 +1,32 @@
 {
   "name": "simple-image-resize-merge",
-  "main": "src/index.js",
-  "type": "module",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "repository": "https://github.com/ookamiiixd/simple-image-resize-merge.git",
   "author": "Royhan <ookamiiixd@gmail.com>",
-  "private": true,
+  "license": "MIT",
   "scripts": {
-    "start": "node ."
+    "start": "node lib/cli.js",
+    "build": "tsc",
+    "format": "prettier --write ."
+  },
+  "bin": {
+    "sirm": "lib/cli.js"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8.0.0",
+    "@types/minimist": "^1.2.2",
+    "@types/node": "^18.7.20",
+    "@types/pdfkit": "^0.12.6",
+    "@types/sharp": "^0.31.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.3"
   },
   "dependencies": {
-    "is-image": "^3.1.0",
+    "inquirer": "^8.0.0",
     "minimist": "^1.2.6",
-    "p-limit": "^4.0.0",
+    "nanospinner": "^1.1.0",
     "pdfkit": "^0.13.0",
     "sharp": "^0.31.0"
   }
